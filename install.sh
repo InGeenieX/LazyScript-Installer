@@ -55,7 +55,7 @@ git clone https://github.com/arismelachroinos/lscript foldertmp
 
 mv ./foldertmp/* ./
 
-
+clear
 echo "Thank you for choosing MascaCorp Incorporated for this downloader/installer"
 sleep 5
 echo "Launching installer !"
