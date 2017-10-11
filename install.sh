@@ -14,17 +14,17 @@ echo "This script isn't affiliated with any other script"
 sleep 3
 
 
-cd /tmp/
+cd /root/
 fail=0
-mkdir ./lazyscript/ || fail=1
+mkdir ./lscript/ || fail=1
 
 if [ $fail = 1 ]; then
 	echo "Please restart the script"
-	rm -r /tmp/lazyscript/
+	rm -r /root/lscript/
 	exit 3	
 fi
 
-cd ./lazyscript/
+cd ./lscript/
 
 
 if [[ $(git version) = 0 ]]
@@ -51,23 +51,11 @@ fi
 
 echo "Cloning LazyScript"
 sleep 2
-if [ $(git clone https://github.com/arismelachroinos/lscript) -ne 0 ]; then
-	echo "Git clone failed..."
-	sleep 2
-	echo "Trying again"
-	if [ $(git clone https://github.com/arismelachroinos/lscript) -ne 0 ]; then
-		echo "Can't download from here"
-		echo "Downloading from direct link"
-		apt-get install -y unzip
-		wget https://github.com/arismelachroinos/lscript/archive/master.zip
-		unzip master.zip
+git clone https://github.com/arismelachroinos/lscript foldertmp
 
-	fi
+mv ./foldertmp/* ./
 
-fi
 
-cd ./lscri*
-clear
 echo "Thank you for choosing MascaCorp Incorporated for this downloader/installer"
 sleep 5
 echo "Launching installer !"
