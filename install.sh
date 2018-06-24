@@ -8,7 +8,7 @@ fi
 
 clear
 
-echo "Install script created by MascaCorp Incorporated."
+echo "Install script created by MascaCorp Inc."
 echo "LazyScript created by Aris Melachroinos"
 echo "This script isn't affiliated with any other script"
 sleep 3
